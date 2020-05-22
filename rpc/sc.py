@@ -6,7 +6,6 @@ from rpc.err import ErrBaseClass, ErrLackOfNecessaryKey, ErrTargetMethodNotFound
 from rpc.utils import get_key
 
 
-# 防止与trpc冲突不要尝试使用protobuf,这里默认使用json数据格式进行编解码
 # 这里不保持长连接, 下游请求按照单次请求进行, 可以在服务下游对进行连接池处理,调用的时候从连接池获取可达到性能最优
 # 一直保持长连接的方案,需要更多更多的工作量,短时间内可能无法完成
 
